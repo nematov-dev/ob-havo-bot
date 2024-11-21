@@ -106,8 +106,8 @@ class Database:
 
 db = Database(DB_NAME="railway",
               DB_USER="root",
-              DB_PASSWORD="EvRoIaxMwVrYVUFvAlGHnBTrZpAVNrJj",
-              DB_HOST="mysql.railway.internal",
+              DB_PASSWORD="IEQDEKLMUIAaWgVuVBmviIezIRAVQFHj",
+              DB_HOST="mysql-9lvk.railway.internal",
               DB_PORT=3306)
 
 
