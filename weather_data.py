@@ -3,7 +3,7 @@ from datetime import datetime
 import requests
 
 
-API_TOKEN = "5b1e520468c63477c4e4cdac50e31ab9"
+API_TOKEN = "a9520c4fbc4ae75a66b86e6bc5b87896"
 
 def get_weather_data(city_name: str) -> str:
     URL = f"https://api.openweathermap.org/data/2.5/weather"
