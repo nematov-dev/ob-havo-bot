@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime,timedelta
 
 import requests
 
@@ -16,8 +16,9 @@ def get_weather_data(city_name: str) -> str:
     data = weather_data.json()
 
     if data["cod"] == 200:
-        sunrise = str(datetime.fromtimestamp(data['sys']['sunrise']))[-8:]
-        sunset = str(datetime.fromtimestamp(data['sys']['sunset']))[-8:]
+        sunrise = (datetime.fromtimestamp(data['sys']['sunrise']) + timedelta(hours=5)).strftime('%H:%M:%S')
+        sunset = (datetime.fromtimestamp(data['sys']['sunset']) + timedelta(hours=5)).strftime('%H:%M:%S')
+
         if data['main']['temp'] < 10:
             text = f"🌆 Bugun <b>{data['name']}</b> da\n\n"
             text += f"🌡 Harorat: <b>{data['main']['temp']} В°C</b>\n"
