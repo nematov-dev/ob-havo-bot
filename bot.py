@@ -5,12 +5,13 @@ from aiogram.filters.command import CommandStart
 from aiogram.types import Message, CallbackQuery,ReplyKeyboardRemove
 from aiogram import Bot, Dispatcher
 from aiogram import F
+from decouple import config
 
 from weather_data import get_weather_data
 from keyboards import generate_save_city_menu, generate_cities_menu,generate_dev_menu
 from database import db
 
-TOKEN = "8016561527:AAF2iA85N5KKykJnB59_N9PVq0saOjBDpOU"
+TOKEN = config("TOKEN")
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()

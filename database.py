@@ -1,5 +1,6 @@
 from pymysql import connect
 from pymysql.cursors import DictCursor
+from decouple import config
 
 
 class Database:
@@ -104,10 +105,10 @@ class Database:
         self.execute(sql,(user_id),commit=True)
 
 
-db = Database(DB_NAME="railway",
-              DB_USER="root",
-              DB_PASSWORD="IEQDEKLMUIAaWgVuVBmviIezIRAVQFHj",
-              DB_HOST="mysql-9lvk.railway.internal",
+db = Database(DB_NAME=config("DB_NAME"),
+              DB_USER=("DB_USER"),
+              DB_PASSWORD=("DB_PASSWORD"),
+              DB_HOST=("DB_HOST"),
               DB_PORT=3306)
 
 
