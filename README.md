@@ -127,8 +127,3 @@ The bot will:
 This project is open-source and intended for **educational and demonstration purposes**.
 
 ---
-
-## 📞 Contact
-
-- 👤 Developer: **Saidakbar Nematov** – [nematov.uz](https://nematov.uz)  
-- 📱 Telegram: [@n_saidakbar](https://t.me/n_saidakbar)
